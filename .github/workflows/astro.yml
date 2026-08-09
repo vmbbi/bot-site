@@ -80,7 +80,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: https://${{ forge.repository_owner }}.codeberg.page/
+      url: https://vmbbi.codeberg.page/
     needs: build
     runs-on: ubuntu-latest
     name: Deploy
