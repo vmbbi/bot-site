@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 html {
     background-color: #162433;
     font-family: sans-serif;
@@ -9,6 +13,15 @@ body {
     max-width: 80ch;
     padding: 1rem;
     line-height: 1.5;
+    /* Added for Sticky Footer */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Added to push the footer down */
+main {
+    flex: 1;
 }
 
 .menu {
@@ -19,10 +32,7 @@ body {
     font-weight: bold;
     padding: 5px 10px;
 }
-* {
-    box-sizing: border-box;
-}
-a{
+a {
     color: #00c3ff;
     text-decoration: none;
 }
@@ -46,6 +56,14 @@ p{
 li{
     color: azure;
 }
+button{
+    margin: 0.25em;
+    border: solid 1px #a1a1a1;
+    border-radius: .5em;
+    padding: .5em 1em;
+    font-size: 1.15em;
+    background-color: #0c206c;
+}
 .nav-links {
     width: 100%;
     display: none;
@@ -59,7 +77,6 @@ li{
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: bold;
-    text-transform: uppercase;
     color: #88e4e4;
 }
 
