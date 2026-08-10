@@ -9,21 +9,16 @@ const identity = {
     firstName: "Max",
     country: "China",
     occupation: "Student",
-    hobbies: ["Gaming", "crying", "deppresion"],
+    hobbies: ["Gaming", "Being bored"],
 };
 
-const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
-const happy = true;
-const finished = false;
-const goal = 3;
+const skills = ["HTML", "CSS", "Writing Docs"];
 ---
 <BaseLayout>
     <h1>About Me</h1>
     <h2>I'm vmbbi </h2>
     <h3>and I hate YOU, SPECIFICALLY YOU</h3>
-    <p>I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself!</p>
-
-    <p>This site will update as I complete more of the tutorial, so keep checking back and see how my journey is going!</p>
+    <p>THATS it</p>
     <p>Here are a few facts about me:</p>
     <ul>
         <li>My name is {identity.firstName}.</li>
@@ -36,16 +31,7 @@ const goal = 3;
     <ul>
         {skills.map((skill) => <li class="skill">{skill}</li>)}
     </ul>
-    {happy && <p>I am happy to be learning Astro!</p>}
-
-    {finished && <p>I finished this tutorial!</p>}
-
-    {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
     <style>
-        h1 {
-            color: #00c3ff;
-            font-size: 4rem;
-        }
         .skill{
             color: green;
             font-weight: bold;

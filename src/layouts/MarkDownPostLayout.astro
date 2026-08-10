@@ -2,6 +2,7 @@
 import BaseLayout from "./BaseLayout.astro";
 
 const { frontmatter } = Astro.props;
+const imageSize = frontmatter.image.size || "300px";
 ---
 
 <BaseLayout pageTitle = {frontmatter.title} >
@@ -18,20 +19,27 @@ const { frontmatter } = Astro.props;
 </BaseLayout>
 <style>
     img{
-        width: 700px;
+        width: var(--imageSize);
         height: auto;
     }
     .tags {
         display: flex;
         flex-wrap: wrap;
     }
-
-    .tag {
+    .dark .tag {
         margin: 0.25em;
         border: solid 1px #a1a1a1;
         border-radius: .5em;
         padding: .5em 1em;
         font-size: 1.15em;
         background-color: #0c206c;
+    }
+    .tag {
+        margin: 0.25em;
+        border: solid 1px #121f3a;
+        border-radius: .5em;
+        padding: .05em 1em;
+        font-size: 1.15em;
+        background-color: #88e4e4;
     }
 </style>
