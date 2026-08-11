@@ -3,7 +3,10 @@
 }
 
 html.dark {
-    background-color: #162433;
+    background-image: url("../../public/TARDISBG.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     font-family: var(--font-minecraft)
 }
 html{
