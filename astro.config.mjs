@@ -1,22 +1,26 @@
 // @ts-check
-import { defineConfig, fontProviders } from 'astro/config';
+import { defineConfig, fontProviders } from "astro/config";
 
-import preact from '@astrojs/preact';
+import preact from "@astrojs/preact";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://vmbbi.codeberg.page',
+  site: "https://vmbbi.codeberg.page",
   integrations: [preact()],
-  fonts: [{
-    provider: fontProviders.local(),
-    name: "Minecraft",
-    cssVariable: "--font-minecraft",
-    options: {
-      variants: [{
-        src: ['./src/assets/fonts/Minecraft.woff2'],
-        weight: 'normal',
-        style: 'normal'
-      }]
-    }
-  }]
+  fonts: [
+    {
+      provider: fontProviders.local(),
+      name: "Minecraft",
+      cssVariable: "--font-minecraft",
+      options: {
+        variants: [
+          {
+            src: ["./src/assets/fonts/Minecraft.woff2"],
+            weight: "normal",
+            style: "normal",
+          },
+        ],
+      },
+    },
+  ],
 });
