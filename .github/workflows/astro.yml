@@ -67,8 +67,6 @@ jobs:
         run: |
           ${{ steps.detect-package-manager.outputs.runner }} astro build
         working-directory: ${{ env.BUILD_PATH }}
-      - name: Create CNAME file
-        run: echo "vmbbi.is-a.dev" > ${{ env.BUILD_PATH }}/dist/CNAME
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
