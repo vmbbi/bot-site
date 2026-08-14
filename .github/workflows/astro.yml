@@ -75,7 +75,7 @@ jobs:
 
   deploy:
     environment:
-      name: github-pages
+      name: codeberg-pages
     needs: build
     runs-on: ubuntu-latest
     name: Deploy
@@ -84,7 +84,7 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@v4
         with:
-          name: github-pages
+          name: codeberg-pages
           path: ${{ env.BUILD_PATH }}/dist
 
       # MODIFIED: Replaced the invalid Forgejo URL with standard Git commands to push to Codeberg
@@ -97,4 +97,4 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add .
           git commit -m "Deploy Astro site from GitHub Actions"
-          git push --force "https://${{ secrets.CODEBERG_USER }}:${{ secrets.CODEBERG_TOKEN }}@codeberg.org/${{ secrets.CODEBERG_USER }}/pages.git" pages
+          git push --force "https://${{ secrets.CODEBERG_USER }}:${{ secrets.CODEBERG_TOKEN }}@codeberg.org/${{ secrets.CODEBERG_USER }}/pages2.git" pages
