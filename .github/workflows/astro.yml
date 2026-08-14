@@ -92,7 +92,6 @@ jobs:
         run: |
            cd ${{ env.BUILD_PATH }}/dist
             tar -czf ../site.tar.gz .
-            curl -X PUT "https://codeberg.page/" \
-              -H "Host: vmbbi.is-a.dev" \
+            curl -X PUT "https://codeberg.page/pages2" \
               -H "Authorization: Pages ${{ secrets.CODEBERG_TOKEN }}" \
               --data-binary "@../site.tar.gz"
