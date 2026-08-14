@@ -5,7 +5,7 @@ import preact from "@astrojs/preact";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://vmbbi.is-a.dev",
+  site: "https://vmbbi.is-a.bot",
   integrations: [preact()],
   fonts: [
     {
