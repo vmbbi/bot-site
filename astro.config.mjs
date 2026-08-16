@@ -7,7 +7,6 @@ import preact from "@astrojs/preact";
 export default defineConfig({
   site: "https://vmbbi.is-a.bot",
   integrations: [preact()],
-  base: "/pages2/",
   fonts: [
     {
       provider: fontProviders.local(),
